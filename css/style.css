@@ -1,0 +1,254 @@
+@import "./bulma.min.css";
+@import "./nomalize.css";
+
+@font-face {
+  font-family: 'SourceHanSerif';
+  src: url('../fonts/SourceHanSerif-Light.otf');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'SourceHanSerif';
+  src: url('../fonts/SourceHanSerif-Regular.otf');
+}
+
+/* ぴんく #EB6EA5 */
+/* あお #98D6F6 */
+/* きいろ #FFDE2A */
+/* みどり CDE18D */
+
+body {
+  font-family: 'SourceHanSerif';
+}
+
+.header {
+  background-image: url('../images/mv-pc.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-text {
+  width: 50%;
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*--------------
+  nav
+ --------------*/
+
+.nav {
+  position: sticky;
+  position: -webkit-sticky;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  z-index: 10;
+  top: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container li {
+  padding: 8px 0 8px 32px;
+  position: relative;
+}
+
+.nav-container li a {
+  color: #333;
+}
+
+
+.nav-container li:not(:last-child) {
+  margin-right: 32px;
+}
+
+.nav-container li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-container li:hover::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  transition: background-color .6s ease-in;
+}
+
+.nav-container li:nth-child(1)::before,
+.nav-container li:nth-child(2):hover::after {
+  background-color: #EB6EA5;
+}
+
+.nav-container li:nth-child(2)::before,
+.nav-container li:nth-child(3):hover::after {
+  background-color: #98D6F6;
+}
+
+.nav-container li:nth-child(3)::before,
+.nav-container li:nth-child(1):hover::after {
+  background-color: #FFDE2A;
+}
+
+/*--------------
+  main
+ --------------*/
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.h2 {
+  display: inline-block;
+  font-size: 24px;
+  position: relative;
+  padding: 0 0 6px 42px;
+  margin: 60px 0 20px;
+}
+
+.h2::before,
+.h2::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.h2::before {
+  left: 0;
+}
+
+.h2::after {
+  left: 14px;
+}
+
+.h2:nth-of-type(1)::before,
+.h2:nth-of-type(2)::after  {
+  background-color: #EB6EA5;
+}
+
+.h2:nth-of-type(2)::before,
+.h2:nth-of-type(3)::after  {
+  background-color: #98D6F6;
+}
+
+.h2:nth-of-type(3)::before,
+.h2:nth-of-type(1)::after  {
+  background-color: #FFDE2A;
+}
+
+.about-lead,
+.detail-lead {
+  line-height: 2.4;
+  margin-bottom: 24px;
+}
+
+.h3 {
+  display: block;
+  width: 10vw;
+  background-color: #eee;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+.access-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.access-detail {
+  text-align: left;
+  width: 40vw;
+  min-width: 320px;
+}
+
+.access-detail img {
+  height: 120px;
+  width: auto;
+  margin-bottom: 40px;
+}
+
+.access-map {
+  min-width: 440px;
+}
+
+.access-map img {
+  width: auto;
+  height: 280px;
+}
+
+.footer {
+  width: 100vw;
+  height: 50vh;
+  background-image: url('../images/background-bottom.png');
+  background-size: 100vw auto;
+  background-position: bottom left;
+  background-color: #fff;
+}
+
+@media(max-width: 750px) {
+  .header {
+    background-image: url('../images/sp-mv.png');
+  }
+
+  .header-text {
+    top: 55vh;
+    width: 90%;
+  }
+
+  .container {
+    padding: 0 4vw;
+  }
+
+  .about-lead,
+  .detail-lead {
+    line-height: 2.4;
+    font-size: 14px;
+  }
+
+
+  .access-detail,
+  .access-map {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .access-map img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    height: 30vh;
+  }
+}
