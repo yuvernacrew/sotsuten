@@ -184,6 +184,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .access-detail {
@@ -197,6 +198,10 @@ body {
   height: 120px;
   width: auto;
   margin-bottom: 40px;
+}
+
+.access-detail img:last-child {
+  height: 100px;
 }
 
 .access-map {
