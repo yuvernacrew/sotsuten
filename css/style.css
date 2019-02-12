@@ -189,6 +189,7 @@ body {
 .access-detail {
   text-align: left;
   width: 40vw;
+  max-width: 420px;
   min-width: 320px;
 }
 
