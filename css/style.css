@@ -15,7 +15,7 @@
 /* ぴんく #EB6EA5 */
 /* あお #98D6F6 */
 /* きいろ #FFDE2A */
-/* みどり CDE18D */
+/* みどり #CDE18D */
 
 body {
   font-family: 'SourceHanSerif';
@@ -28,7 +28,7 @@ body {
   background-position: top center;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 40px);
 }
 
 .header-text {
@@ -204,6 +204,39 @@ body {
   height: 100px;
 }
 
+.access-detail-text {
+  padding-left: 10px;
+}
+
+.access-detail-text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.access-detail-text:nth-child(1) {
+  border-left: 2px solid #EB6EA5;
+}
+
+.access-detail-text:nth-child(2) {
+  border-left: 2px solid #98D6F6;
+}
+
+.access-detail-text:nth-child(3) {
+  border-left: 2px solid #FFDE2A;
+}
+
+.access-detail-text .sub {
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.access-detail-text .main {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
 .access-map {
   min-width: 440px;
 }
@@ -211,6 +244,24 @@ body {
 .access-map img {
   width: auto;
   height: 280px;
+}
+
+.map-container h3 {
+  text-align: center;
+  font-size: 1.4em;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #CDE18D;
+  width: 60vw;
+  margin: 0 auto 20px;
+}
+
+.map-container img {
+  width: 60%;
+  margin-bottom: 40px;
+}
+
+.map-container img:last-child {
+  width: 80%;
 }
 
 .footer {
@@ -242,6 +293,9 @@ body {
     font-size: 14px;
   }
 
+  .access-detail {
+    margin-bottom: 20px;
+  }
 
   .access-detail,
   .access-map {
@@ -252,6 +306,15 @@ body {
   .access-map img {
     width: 100%;
     height: auto;
+  }
+
+  .map-container img {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  .map-container img:last-child {
+    width: 100%;
   }
 
   .footer {
